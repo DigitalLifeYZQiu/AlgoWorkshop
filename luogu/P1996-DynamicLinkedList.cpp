@@ -1,4 +1,7 @@
 //
+// Created by robin chen on 24-9-5.
+//
+//
 // Created by robin chen on 24-9-3.
 //
 #include<iostream>
@@ -6,7 +9,7 @@ using namespace std;
 struct node{
 	int data;
 	node *next;
-}; 
+};
 int main(){
 	int n,m;
 	cin>>n>>m;
@@ -19,14 +22,14 @@ int main(){
 		p = new node;
 		p -> data = i;
 		p -> next = NULL;
-		now->next = p; 
+		now->next = p;
 		now = p;
 	}
 	now -> next = head;
-	
+
 	now = head;
 	prev = head;
-	
+
 	while((n--) > 1){
 		for(int i=1;i<m;i++){
 			prev = now;
@@ -35,7 +38,7 @@ int main(){
 		cout<<now->data<<" ";
 		prev -> next = now ->next;
 		delete now;
-		now = prev -> next; 
+		now = prev -> next;
 	}
 	cout<<now->data;
 	delete now;

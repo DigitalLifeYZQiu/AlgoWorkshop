@@ -1,4 +1,8 @@
 //
+// Created by robin chen on 24-9-5.
+//
+
+//
 // Created by robin chen on 24-9-3.
 //
 #include<iostream>
@@ -30,4 +34,4 @@ int main(){
 	}
 	cout<<nodes[now].nextid;
 	return 0;
-} 
+}
