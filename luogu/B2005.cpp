@@ -1,0 +1,12 @@
+//
+// Created by Yunzhong Qiu on 2026/6/10.
+//
+
+// #include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+int main(){
+    char ch;
+    cin>>ch;
+    cout<<"  "<<ch<<endl<<" "<<ch<<ch<<ch<<endl<<ch<<ch<<ch<<ch<<ch;
+}
