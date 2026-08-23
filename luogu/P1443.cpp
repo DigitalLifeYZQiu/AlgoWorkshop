@@ -9,7 +9,7 @@
 
 #include<iostream>
 #include<queue>
-#include<cstdio>
+#include<iomanip>
 using namespace std;
 
 int n, m;
@@ -51,13 +51,14 @@ int main()
     }
     bfs(sx, sy);
 
+    cout << left;                        // 左对齐（粘性操纵符，设置一次即可）
     for (int i=1; i<=n; i++)
     {
         for (int j=1; j<=m; j++)
         {
-            printf("%-5d", dist[i][j]);  // 每个数占 5 字符宽度、左对齐
+            cout << setw(5) << dist[i][j];  // 每个数占 5 字符宽度（setw 只对下一次输出生效）
         }
-        printf("\n");
+        cout << '\n';
     }
     return 0;
 }
