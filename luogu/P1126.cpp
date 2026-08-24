@@ -67,7 +67,9 @@ int bfs(int sr, int sc, int sd, int tr, int tc)
         for (int k=1; k<=3; k++)
         {
             int nr = r + dx[d] * k, nc = c + dy[d] * k;
-            if (nr < 0 || nr > N || nc < 0 || nc > M) break;   // 越界（行范围 0..N）
+            // 机器人身体半径 0.8，中心若在边界格点(0/N 行、0/M 列)会撞墙，
+            // 所以合法中心范围是内部格点 1..N-1 行、1..M-1 列
+            if (nr < 1 || nr > N-1 || nc < 1 || nc > M-1) break;
             if (!ok(nr, nc)) break;                            // 途中遇障碍，无法再往前
             if (dist[nr][nc][d] == -1)
             {
