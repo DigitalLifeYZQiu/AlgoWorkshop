@@ -33,3 +33,9 @@
 
 # IDE
 *.idea
+# CLion 构建输出目录
+cmake-build-debug/
+
+# 编译生成的无扩展名可执行文件（如 g++ -o T590312 T590312.cpp 的产物）
+thuMaster/code/*
+!thuMaster/code/*.cpp
